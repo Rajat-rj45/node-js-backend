@@ -1,0 +1,6 @@
+User name is Rajat Kumar
+Email is rajat@gmail.com
+Password : yoyoyo1483232629
+Role is developer
+ Bio: 
+I am software developer in AGR consulting 
