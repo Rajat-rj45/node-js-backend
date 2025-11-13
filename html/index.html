@@ -3,12 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Simple Website</title>
+  <title>Home | My Simple Website</title>
   <style>
-    body { font-family: Arial; margin: 0; background: #f9f9f9; }
-    header, footer { background: #333; color: rgb(243, 124, 124); text-align: center; padding: 1em 0; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; }
-    main { padding: 2em; text-align: center; }
+    /* ===== Reset & Base ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #f0f4ff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(90deg, #4a90e2, #9013fe);
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #ffe082;
+      border-bottom: 2px solid #ffe082;
+    }
+
+    /* ===== Main Section ===== */
+    main {
+      flex: 1;
+      padding: 3em 1em;
+      text-align: center;
+      background: white;
+      margin: 2em auto;
+      border-radius: 15px;
+      max-width: 800px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    main:hover {
+      transform: translateY(-5px);
+    }
+
+    main h2 {
+      color: #4a90e2;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2em;
+      padding: 0.8em 1.5em;
+      background: linear-gradient(90deg, #4a90e2, #9013fe);
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #9013fe, #4a90e2);
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #333;
+      color: #ddd;
+      text-align: center;
+      padding: 1.2em 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    footer p span {
+      color: #ffe082;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        margin: 1.5em 1em;
+        padding: 2em 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -25,11 +148,15 @@
 
   <main>
     <h2>Welcome to My Website</h2>
-    <p>This is a simple 5-page website built with HTML and CSS.</p>
+    <p>
+      Discover beautifully designed pages with simple, clean, and elegant styles.
+      This website demonstrates how minimal HTML and CSS can create a professional look.
+    </p>
+    <a href="/about" class="btn">Learn More</a>
   </main>
 
   <footer>
-    <p>© 2025 My Simple Website | All Rights Reserved</p>
+    <p>© 2025 <span>My Simple Website</span> | All Rights Reserved</p>
   </footer>
 </body>
 </html>
