@@ -66,7 +66,7 @@ http
     }     else {
       // 404 page
       res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("404 Page Not Found");
+      res.end("404 Page Not Found!");
     }
   })
   .listen(3200, () => {
