@@ -21,7 +21,7 @@ http.createServer((req, res) => {
         req.on('end', ()=>{
             let rawData = Buffer.concat(dataBody).toString();
             let readableData = queryString.parse(rawData);
-            let dataString= "User Name is "+ readableData.full_name +"\nEmail is "+ readableData.email +"\nPassword : "+ readableData.password + "\nRole is "+ readableData.role + "\n Bio: \n"+ readableData.bio;
+            let dataString= "User  "+ readableData.full_name +"\nEmail is "+ readableData.email +"\nPassword : "+ readableData.password + "\nRole is "+ readableData.role + "\n Bio: \n"+ readableData.bio;
             console.log(dataString);
            fs.writeFileSync("text/"+readableData.full_name+".txt",dataString);
         })
