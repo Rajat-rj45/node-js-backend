@@ -25,7 +25,7 @@ http.createServer((req, res) => {
             console.log(dataString);
            fs.writeFileSync("text/"+readableData.full_name+".txt",dataString);
         })
-        res.write("<h1>Data Submitted & new file created in text folder</h1>");
+        res.write("<h1>Data Submitted and new file created in text folder</h1>");
       }
       res.end();
     });
